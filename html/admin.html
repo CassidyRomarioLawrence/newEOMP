@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link rel="stylesheet" href="../styles/style.css">
+<link rel="shortcut icon" href="../assets/Gray Black Minimalist Modern Brand Logo.png" type="image/x-icon">
+    <title>SUPERLATIVE.CO ADMIN</title>
+</head>
+<body>
+<div class="background">
+    <header>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-transparent">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="../assets/Gray Black Minimalist Modern Brand Logo.gif" alt="logo" style="width: 3em;">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" id="i"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Admin</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./checkout.html">Checkout</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+    </header>
+    <main>
+        <section>
+                <h4 class="display-4 text-center" id="heads">ADMIN</h4>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <button class="btn mb-2" data-bs-toggle="modal" data-bs-target="#Modal0" id="addProduct">ADD</button>
+                    </div>
+                </div>
+            </div>
+<!-- Add Modal -->
+<div class="modal fade" id="Modal0" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Modal0Label">Add</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h4>Product</h4>
+          <div id="bottomBorder">
+              <div>
+                <label>Name of product :</label>
+                <input type="text" id="productName" placeholder="Enter name of product">
+              </div>
+              <div>
+                <label>Size :</label>
+                <input type="text" id="productSize" placeholder="Enter available sizes of clothing">
+              </div>
+              <div>
+                <label>Color :</label>
+                <input type="text" id="productColor" placeholder="Enter clothing color">
+              </div>
+              <div>
+                <label>Price of clothing :</label>
+                <input type="number" id="price" placeholder="Enter price">
+              </div>
+              <div>
+                <label>Type of clothing :</label>
+                <input type="text" id="type" placeholder="Enter type of clothing">
+              </div>
+          </div>
+          <h4>Image</h4>
+          <div id="bottomBorder">
+            <label>Image URL:</label>
+            <input type="text" id="image" placeholder="Enter url link for image">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="addIt">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        </section>
+        <section>
+            <table class="table table-dark" id="admin">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Sizes</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Edit</th>
+                  </tr>
+                </thead>
+                <tbody id="admin">
+                </tbody>
+              </table>
+        </section>
+    </main>
+    <footer></footer>
+</div>
+    <script src="../js/admin.js"></script>
+    <script src="https://kit.fontawesome.com/5aba0c65bb.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
