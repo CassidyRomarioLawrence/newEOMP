@@ -1,16 +1,16 @@
-let clothing = JSON.parse(localStorage.getItem('product'))
+let clothing = JSON.parse(localStorage.getItem('clothing'))
 
 // Tabled Product Information
 function displayed(){
-    clothing.forEach((product)=>{
+    clothing.forEach((clothing)=>{
         document.querySelector('.table').innerHTML+=`
         <tr id="pretty">
-        <th scope="row">${product.id}</th>
-        <td>${product.description.name}</td>
-        <td>${product.description.color}</td>
-        <td>R${product.price}</td>
+        <th scope="row">${clothing.id}</th>
+        <td>${clothing.description.name}</td>
+        <td>${clothing.description.color}</td>
+        <td>R${clothing.price}</td>
         <td>
-        <i class="fa-solid fa-pen-to-square" id="deleteMe" data-bs-toggle="modal" data-bs-target="#Modal1"></i>
+        <i class="fa-solid fa-pen-to-square" onclick='' data-bs-toggle="modal" data-bs-target="#Modal1"></i>
         <i class="fa-solid fa-trash-can"></i>
         </td>
       </tr>`
@@ -42,27 +42,14 @@ add.addEventListener('click', ()=>{
             type
         }
     )
-    localStorage.setItem('product', JSON.stringify(clothing));
+    localStorage.setItem('clothing', JSON.stringify(clothing));
   displayed(clothing);
   // Automatic Reload
-  location.reload()
+  location.reload();
 })
 // Sorter
-let sorter = document.querySelector('#sorter')
-
-sorter.addEventListener('click', () => {
-  clothing.sort(function (a, b) {
-  if (a.productName < b.productName) { return -1 }
-  if (a.productName > b.productName) { return 1 }
-  return 0;
-  })
-  localStorage.setItem('product', JSON.stringify(clothing));
-  displayed(clothing);
-})
-
 
 // Delete
-
 
 
 
