@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
-.background{
-    background-image: url(../assets/pexels-sami-aksu-14355680.jpg);
+.background1{
+    background-image: url(https://i.postimg.cc/wvMxrggm/pexels-sami-aksu-14355680.jpg);
     background-size: cover;
     min-height: 100vh;
+}
+
+body {
+    background-image: url(https://i.postimg.cc/wvMxrggm/pexels-sami-aksu-14355680.jpg);
+    background-size: cover;
 }
 
 .navbar-nav a{
@@ -87,4 +92,9 @@ td i{
     border-radius: 4px;
     padding: 2px;
     margin: 2px 0;
+}
+
+.admin button{
+    width: 5em;
+    box-shadow: 2px 2px 2px lightcoral;
 }

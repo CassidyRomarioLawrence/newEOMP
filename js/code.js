@@ -3,10 +3,9 @@ JSON.parse(localStorage.getItem('product')) :
 [
     {
         id:1,
-        img:"../assets/Tee1Back.png",
+        img:"https://i.postimg.cc/Hkbr0YkW/Tee1Back.png",
         description:{
             name:"Men Bear Cartoon Graphic Tee",
-            availSizes:"S, M, L, XL, XXL",
             color:"Light Grey"
         },
         price:135,
@@ -14,10 +13,9 @@ JSON.parse(localStorage.getItem('product')) :
     },
     {
         id:2,
-        img:"../assets/Tee3Front.png",
+        img:"https://i.postimg.cc/h43QcZYn/Tee3-Front.png",
         description:{
             name:"Men Reflective Bear & Slogan Graphic Tee",
-            availSizes:"S, M, L, XL, XXL",
             color:"Black"
         },
         price:146,
@@ -25,10 +23,9 @@ JSON.parse(localStorage.getItem('product')) :
     },
     {
         id:3,
-        img:"../assets/Shorts1Front.png",
+        img:"https://i.postimg.cc/0jHw4cT8/Shorts1-Front.png",
         description:{
             name:"Men Drawstring Waist Straight Leg Shorts",
-            availSizes:"S, M, L, XL, XXL",
             color:"Apricot"
         },
         price:263,
@@ -36,10 +33,9 @@ JSON.parse(localStorage.getItem('product')) :
     },
     {
         id:4,
-        img:"../assets/Pants2Front.png",
+        img:"https://i.postimg.cc/tJR3w17z/Pants2-Front.png",
         description:{
             name:"Men Plaid Slant Pocket Tailored Pants",
-            availSizes:"S, M, L, XL, XXL",
             color:"Navy Blue"
         },
         price:286,
@@ -47,10 +43,9 @@ JSON.parse(localStorage.getItem('product')) :
     },
     {
         id:5,
-        img:"../assets/Pants5front.png",
+        img:"https://i.postimg.cc/hG9VG8dr/Pants5front.png",
         description:{
             name:"Drawstring Waist Gingham Pants",
-            availSizes:"S, M, L, XL, XXL",
             color:"Black and White"
         },
         price:310,
@@ -58,10 +53,9 @@ JSON.parse(localStorage.getItem('product')) :
     },
     {
         id:6,
-        img:"../assets/Shorts2Front.png",
+        img:"https://i.postimg.cc/3wHDzycD/Shorts2-Front.png",
         description:{
             name:"Letter Embroidery Flap Pocket Shorts",
-            availSizes:"S, M, L, XL, XXL",
             color:"Black"
         },
         price:280,
@@ -69,10 +63,9 @@ JSON.parse(localStorage.getItem('product')) :
     },
     {
         id:7,
-        img:"../assets/Tee4Front.png",
+        img:"https://i.postimg.cc/HLpkQbN3/Tee4-Front.png",
         description:{
             name:"Men Astronaut & Letter Graphic Tee",
-            availSizes:"S, M, L, XL, XXL",
             color:"Apricot"
         },
         price:148,
@@ -80,10 +73,9 @@ JSON.parse(localStorage.getItem('product')) :
     },
     {
         id:8,
-        img:"../assets/Tee5Front.png",
+        img:"https://i.postimg.cc/wj5Byww7/Tee5-Front.png",
         description:{
             name:"Men Bear Print Round Neck Tee",
-            availSizes:"S, M, L, XL, XXL",
             color:"Black"
         },
         price:120,
@@ -98,7 +90,6 @@ function displayed(){
   <img src="${product.img}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${product.description.name}</h5>
-    <p class="card-text">Available sizes: ${product.description.availSizes}</p>
     <p class="card-text">Color: ${product.description.color}</p>
     <p class="card-text">Price: R${product.price}</p>
     <a href="#" class="btn btn-primary">Add to cart</a>
@@ -109,4 +100,8 @@ function displayed(){
 
 displayed()
 
-localStorage.setItem('product',JSON.stringify(clothing));
+localStorage.setItem('product', JSON.stringify(clothing));
+
+let cart = [];
+
+localStorage.setItem('cart', JSON.stringify(cart));

@@ -11,7 +11,6 @@
 </head>
 <body>
 <div class="background">
-    <header>
         <header>
             <nav class="navbar navbar-expand-lg bg-transparent">
                 <div class="container-fluid">
@@ -37,14 +36,14 @@
                 </div>
               </nav>
         </header>
-    </header>
     <main>
         <section>
                 <h4 class="display-4 text-center" id="heads">ADMIN</h4>
-            <div class="container-fluid">
+            <div class="container-fluid admin">
                 <div class="row">
-                    <div class="col">
-                        <button class="btn mb-2" data-bs-toggle="modal" data-bs-target="#Modal0" id="addProduct">ADD</button>
+                    <div class="col mb-4">
+                        <button class="btn mx-2" data-bs-toggle="modal" data-bs-target="#Modal0" id="addProduct">ADD</button>
+                        <button class="btn" id="sorter">SORT</button>
                     </div>
                 </div>
             </div>
@@ -64,10 +63,6 @@
                 <input type="text" id="productName" placeholder="Enter name of product">
               </div>
               <div>
-                <label>Size :</label>
-                <input type="text" id="productSize" placeholder="Enter available sizes of clothing">
-              </div>
-              <div>
                 <label>Color :</label>
                 <input type="text" id="productColor" placeholder="Enter clothing color">
               </div>
@@ -83,12 +78,53 @@
           <h4>Image</h4>
           <div id="bottomBorder">
             <label>Image URL:</label>
-            <input type="text" id="image" placeholder="Enter url link for image">
+            <input type="url" id="productImage" placeholder="Enter url link for image">
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" id="addIt">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Edit Modal -->
+  <div class="modal fade" id="Modal1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Modal1Label">Edit</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h4>Product</h4>
+          <div id="bottomBorder">
+            <div>
+              <label>Name of product :</label>
+              <input type="text" id="productName" placeholder="Enter name of product">
+            </div>
+            <div>
+              <label>Color :</label>
+              <input type="text" id="productColor" placeholder="Enter clothing color">
+            </div>
+            <div>
+              <label>Price of clothing :</label>
+              <input type="number" id="price" placeholder="Enter price">
+            </div>
+            <div>
+              <label>Type of clothing :</label>
+              <input type="text" id="type" placeholder="Enter type of clothing">
+            </div>
+          </div>
+          <h4>Image</h4>
+          <div id="bottomBorder">
+            <label>Image URL:</label>
+            <input type="url" id="productImage" placeholder="Enter url link for image">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="editIt">Change</button>
         </div>
       </div>
     </div>
@@ -100,7 +136,6 @@
                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Sizes</th>
                     <th scope="col">Color</th>
                     <th scope="col">Price</th>
                     <th scope="col">Edit</th>
